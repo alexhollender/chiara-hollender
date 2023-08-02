@@ -1,0 +1,72 @@
+:root {
+  --max-width: 1540px;
+  --center: 0 auto;
+  --page-side-padding: 70px;
+  --gray-text: #5A5A5A;
+  --gray-border: #c9c9c9;
+  
+  @media (max-width: 700px) {
+    --page-side-padding: 20px;
+  }
+}
+
+
+html { 
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  line-height: 190%; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 200ms;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+p { font-size: 18px; }
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.embed-container {
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; overflow: hidden; 
+  max-width: 100%;
+}
+
+.embed-container iframe, 
+.embed-container object, 
+.embed-container embed { 
+  position: absolute; 
+  top: 0; left: 0; 
+  width: 100%; 
+  height: 100%; 
+}

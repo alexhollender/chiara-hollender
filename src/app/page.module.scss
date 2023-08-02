@@ -1,0 +1,20 @@
+.intro { background: #000; }
+
+.main {
+  max-width: var(--max-width);
+  margin: var(--center);
+  padding-left: var(--page-side-padding);
+  padding-right: var(--page-side-padding);
+}
+
+.main > section {
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--gray-border);
+
+  @media (max-width: 700px) {
+    margin-top: 0;
+  }
+}
+
