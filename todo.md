@@ -5,3 +5,5 @@
 [] Standardize spacing
 [] Deployment
 [] Domain
+[] SEO / meta tags
+[] Alt tags on images

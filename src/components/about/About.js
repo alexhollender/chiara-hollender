@@ -44,7 +44,7 @@ export default async function About() {
         {aboutPage.aboutText}
       </section>
       <section>
-        <img src={aboutPage.image.url} className={styles.aboutImage} />
+        <img src={aboutPage.image.url} className={styles.aboutImage} alt='Chiara Hollender in Oregon, USA' />
       </section>
       <section className={styles.press}>
         <p className={`subtitle ${styles.pressHeading}`}>Press & Screenings</p>

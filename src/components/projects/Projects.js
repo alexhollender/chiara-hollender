@@ -11,12 +11,13 @@ export default async function Projects() {
       <h2 className={cormorantGaramond.className}>Film & TV</h2>
       <div className={gridStyles.projectsGrid}>
         {projects.map((item, index) =>
-          <Link href={`/${item.url}`} className={gridStyles.projectWrapper}>
+          <Link href={`/${item.url}`} className={gridStyles.projectWrapper} key={index}>
             <img 
               src={`https:${item.thumbnail.url}`}
               className={gridStyles.thumbnail}
+              alt={item.projectTitle}
             />
-            <p key={index} className={gridStyles.title}>{item.projectTitle}</p>
+            <p className={gridStyles.title}>{item.projectTitle}</p>
           </Link>
         )}
       </div>
