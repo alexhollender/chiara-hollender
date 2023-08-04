@@ -40,6 +40,7 @@ p { font-size: 18px; }
 
 h1, h2, h3, h4 {
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -62,7 +63,7 @@ h2 {
   max-width: 100%;
 
   @media (max-width: 700px) {
-    padding-bottom: 177%;
+    padding-bottom: 150%;
   }
 }
 

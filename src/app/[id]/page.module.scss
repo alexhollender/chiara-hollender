@@ -34,3 +34,8 @@
     color: var(--gray-text);
   }
 }
+
+@media (max-width: 700px) {
+  .main { margin-top: 195px; }
+  .main > div { padding-bottom: 56.25%; }
+}

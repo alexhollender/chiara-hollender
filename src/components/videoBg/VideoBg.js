@@ -11,7 +11,7 @@ export default function VideoBg() {
   return (
     isMobileView ? 
       <div className="embed-container">
-        <iframe src="https://player.vimeo.com/video/851069742?background=1" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" title="carlotta"></iframe>
+        <iframe src="https://player.vimeo.com/video/851740073?background=1" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" title="carlotta"></iframe>
       </div>
     :
       <div className="embed-container">

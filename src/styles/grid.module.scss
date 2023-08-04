@@ -7,11 +7,19 @@
 .projectWrapper {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
+
 .thumbnail { 
-  width: 100%; 
+  width: 100%;
+  transition: transform 500ms; 
+}
+
+.title { text-transform: uppercase; }
+
+.projectWrapper:hover img.thumbnail {
+  transform: scale(1.03);
 }
 
 @media (max-width: 1000px) {
