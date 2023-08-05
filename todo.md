@@ -9,3 +9,4 @@
 [] Alt tags on images
 [] customize HTML renderer so links open in new windows
 [] Footer w/ "Be kind sing loud"
+[] Max text content

@@ -16,7 +16,11 @@
   transition: transform 500ms; 
 }
 
-.title { text-transform: uppercase; }
+.title { 
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px; 
+}
 
 .projectWrapper:hover img.thumbnail {
   transform: scale(1.03);

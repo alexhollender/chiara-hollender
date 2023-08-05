@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1540px;
+  --max-width: 1590px;
   --center: 0 auto;
   --page-side-padding: 70px;
   --gray-text: #5A5A5A;
@@ -28,14 +28,14 @@ html, body, h1, h2, h3, h4, p {
 
 h1, h2, h3, h4 {
   font-weight: 500;
-  text-transform: uppercase;
   line-height: 126%;
 }
 
+h1, h2, h3 { text-transform: uppercase; }
+
 h2 {
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 40px;
-  text-transform: uppercase;
 }
 
 a {

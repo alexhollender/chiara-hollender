@@ -11,10 +11,11 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${pathname === '/' ? styles.home : ''}`}>
       <div className={styles.headerWrapper}>
-        <div>
+        <div className={styles.leftWrapper}>
           <Link href='/'>
             <h1>Chiara Hollender</h1>
           </Link>
+          <p>Director & Producer</p>
         </div>
         <div className={styles.navLinks}>
           <Link href='/#film-tv' scroll>Film & TV</Link>

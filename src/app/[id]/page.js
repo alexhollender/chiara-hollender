@@ -2,7 +2,7 @@ import getData from '@/utils/getData'
 import Link from 'next/link'
 import styles from './page.module.scss'
 import gridStyles from '../../styles/grid.module.scss'
-import { cormorantGaramond } from '../../fonts'
+import { mazius } from '../../fonts'
 
 function getProject(projects, id) {
   return projects.find(item => item.url === id);
@@ -27,7 +27,7 @@ export default async function Project({ params }) {
         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${project.youtubeVideoId}?controls=0`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
       <section>
-        <h3 className={cormorantGaramond.className}>{project.fullTitle}</h3>
+        <h3>{project.fullTitle}</h3>
         <h4>{project.subtitle}</h4>
         <span>{project.description}</span>
         <span>
@@ -36,7 +36,7 @@ export default async function Project({ params }) {
         </span>
       </section>
       <section>
-        <h2 className={cormorantGaramond.className}>Additional Projects</h2>
+        <h2 className={mazius.className}>Additional Projects</h2>
         <div className={gridStyles.projectsGrid}>
           {projects
             .filter(item => item.url !== params.id)

@@ -34,11 +34,33 @@
   }
 }
 
+.leftWrapper {
+  display: flex;
+  align-items: baseline;
+
+  p {
+    font-size: 24px;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.85);
+    margin-top: 16px;
+    opacity: 0.85;
+    font-weight: 500;
+  }
+}
+
+.home .leftWrapper {
+  p {
+    border-left: 1px solid rgba(255, 255, 255, 0.85);
+  }
+}
+
 .navLinks {
   display: flex;
   gap: 20px;
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
+  font-weight: 500;
 
   @media (max-width: 700px) {
     gap: 30px;

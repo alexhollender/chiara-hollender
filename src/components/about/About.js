@@ -1,6 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import styles from './about.module.scss'
-import { cormorantGaramond } from '../../fonts'
+import { mazius } from '../../fonts'
 
 function formatResponse(response) {
   const aboutPage = response.items.find(item => item.fields.aboutPage !== undefined);
@@ -39,7 +39,7 @@ export default async function About() {
 
   return (
     <section id='about' className={styles.about}>
-      <h2 className={cormorantGaramond.className}>About</h2>
+      <h2 className={mazius.className}>About</h2>
       <section className={styles.aboutText}>
         {aboutPage.aboutText}
       </section>
