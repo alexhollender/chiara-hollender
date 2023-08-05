@@ -9,7 +9,7 @@ export default function Header() {
   const pathname = usePathname()
 
   return (
-    <header className={`${styles.header} ${pathname === '/' ? styles.home : ''}`}>
+    <header className={`${styles.header} ${pathname !== '/' ? styles.project : ''}`}>
       <div className={styles.headerWrapper}>
         <div className={styles.leftWrapper}>
           <Link href='/'>

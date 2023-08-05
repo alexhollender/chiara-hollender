@@ -1,5 +1,6 @@
 :root {
   --max-width: 1590px;
+  --max-text-width: 1050px;
   --center: 0 auto;
   --page-side-padding: 70px;
   --gray-text: #5A5A5A;
@@ -65,7 +66,7 @@ p { font-size: 18px; }
   max-width: 100%;
 
   @media (max-width: 700px) {
-    padding-bottom: 150%;
+    padding-bottom: 150.5%;
   }
 }
 

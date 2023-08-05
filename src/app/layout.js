@@ -1,10 +1,11 @@
 import '../styles/global.scss'
 import Header from '@/components/header/Header'
+import Footer from '@/components/footer/Footer'
 import { generalSans } from '../fonts'
 
 export const metadata = {
-  title: 'Chiara Hollender',
-  description: 'Film director and producer',
+  title: 'Chiara Hollender | Director & Producer',
+  description: "Chiara Hollender is an Iranian-American filmmaker and storyteller based in New England. Hollender's work is deeply empowered by the work of women, and the complexity of nature. She seeks to disrupt the homogenization and colonization of women's voices, and has been called to capture stories that focus on healing.",
 }
 
 export default function RootLayout({ children }) {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={generalSans.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
