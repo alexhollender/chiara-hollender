@@ -6,9 +6,10 @@
 [X] Max text width
 [X] SEO / meta tags
 [X] Social media links
+[X] Standardize spacing
+[X] Consolidate font styles (in utils)
+[X] Header elements fade in
 ----------------------------------
-[] Standardize spacing
-[] Consolidate font styles (in utils)
 [] Domain
 [] Alt tags on images
 [] customize HTML renderer so links open in new windows

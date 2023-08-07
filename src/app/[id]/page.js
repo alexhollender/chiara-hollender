@@ -46,7 +46,7 @@ export default async function Project({ params }) {
     <main className={styles.main}>
 
       <section>
-        <div className='embed-container'>
+        <div className={`embed-container ${styles.projectEmbed}`}>
           <iframe width="560" height="315" src={`https://www.youtube.com/embed/${project.youtubeVideoId}?controls=0`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div>
         <div className={styles.projectDescription}>

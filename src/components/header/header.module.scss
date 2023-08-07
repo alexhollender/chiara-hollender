@@ -29,7 +29,7 @@
     margin: 0 0 0 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.85);
     margin-top: 16px;
-    opacity: 0.85;
+    // opacity: 0.85;
     text-transform: none;
   }
 }
@@ -38,6 +38,22 @@
   display: flex;
   gap: 20px;
 }
+
+.fade1, .fade3 { 
+  opacity: 0;
+  animation: fadeIn 0.75s ease-in-out forwards;
+}
+
+.fade1 { animation-delay: 0.5s; }
+.fade3 { animation-delay: 1.75s; }
+
+.fade2 {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fadeInAndSlide 0.75s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
 
 // Project page header
 .project {
@@ -74,5 +90,32 @@
     .headerWrapper { gap: 24px; }
     .navLinks { font-size: 22px;}
     .leftWrapper h2 { display: none; }
+  }
+
+  .fade2 {
+    opacity: 0;
+    transform: none;
+    animation: fadeIn 0.75s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
