@@ -13,9 +13,9 @@ export async function generateMetadata({ params }) {
   const project = getProject(projects, params.id)
  
   return {
-    title: `Chiara Hollender | ${project.subtitle}`,
+    title: `Chiara Hollender • ${project.subtitle}`,
     openGraph: {
-      title: `Chiara Hollender | ${project.subtitle}`,
+      title: `Chiara Hollender • ${project.subtitle}`,
       description: `${project.fullTitle}`,
       images: [
         {
