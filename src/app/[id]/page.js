@@ -13,7 +13,27 @@ export async function generateMetadata({ params }) {
   const project = getProject(projects, params.id)
  
   return {
-    title: `Chiara Hollender | ${project.fullTitle}`
+    title: `Chiara Hollender | ${project.subtitle}`,
+    openGraph: {
+      title: `Chiara Hollender | ${project.subtitle}`,
+      description: `${project.fullTitle}`,
+      images: [
+        {
+          url: `${project.thumbnail.url}`,
+          width: `${project.thumbnail.width}`,
+          height: `${project.thumbnail.height}`,
+        },
+      ],
+    },
+    twitter: {
+      images: [
+        {
+          url: `${project.thumbnail.url}`,
+          width: `${project.thumbnail.width}`,
+          height: `${project.thumbnail.height}`,
+        },
+      ]
+    },
   }
 }
 
