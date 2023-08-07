@@ -2,6 +2,7 @@ import getData from '@/utils/getData'
 import Link from 'next/link'
 import styles from './page.module.scss'
 import gridStyles from '../../styles/grid.module.scss'
+import typeStyles from '../../styles/type.module.scss'
 import { mazius } from '../../fonts'
 
 function getProject(projects, id) {
@@ -43,20 +44,28 @@ export default async function Project({ params }) {
 
   return (
     <main className={styles.main}>
-      <div className='embed-container'>
-        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${project.youtubeVideoId}?controls=0`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-      </div>
-      <section className={styles.projectDescription}>
-        <h3>{project.fullTitle}</h3>
-        <h4>{project.subtitle}</h4>
-        <span>{project.description}</span>
-        <span>
-          <p className='subtitle'>Credits</p>
-          {project.credits}
-        </span>
-      </section>
+
       <section>
-        <h2 className={mazius.className}>Additional Projects</h2>
+        <div className='embed-container'>
+          <iframe width="560" height="315" src={`https://www.youtube.com/embed/${project.youtubeVideoId}?controls=0`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        </div>
+        <div className={styles.projectDescription}>
+          <div>
+            <h2>{project.fullTitle}</h2>
+            <h4>{project.subtitle}</h4>
+          </div>
+          <div className={typeStyles.body}>
+            {project.description}
+          </div>
+          <div className={styles.credits}>
+            <p className={typeStyles.label}>Credits</p>
+            {project.credits}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 className={mazius.className}>Additional Projects</h3>
         <div className={gridStyles.projectsGrid}>
           {projects
             .filter(item => item.url !== params.id)
@@ -67,14 +76,16 @@ export default async function Project({ params }) {
                   className={gridStyles.thumbnail}
                   alt={item.projectTitle}
                 />
-                <p className={gridStyles.title}>{item.projectTitle}</p>
+                <p className={typeStyles.label}>{item.projectTitle}</p>
               </Link>
             )}
         </div>
       </section>
+
       <section>
         <Link href="/">← Home page</Link>
       </section>
+
     </main>
   )
 }

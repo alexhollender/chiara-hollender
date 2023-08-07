@@ -1,6 +1,7 @@
 import getData from '@/utils/getData'
-import gridStyles from '../../styles/grid.module.scss'
 import Link from 'next/link';
+import gridStyles from '../../styles/grid.module.scss'
+import typeStyles from '../../styles/type.module.scss'
 import { mazius } from '../../fonts'
 
 export default async function Projects() {
@@ -8,7 +9,7 @@ export default async function Projects() {
   
   return (
     <section id='film-tv'>
-      <h2 className={mazius.className}>Film & TV</h2>
+      <h3 className={mazius.className}>Film & TV</h3>
       <div className={gridStyles.projectsGrid}>
         {projects.map((item, index) =>
           <Link href={`/${item.url}`} className={gridStyles.projectWrapper} key={index}>
@@ -17,7 +18,7 @@ export default async function Projects() {
               className={gridStyles.thumbnail}
               alt={item.projectTitle}
             />
-            <p className={gridStyles.title}>{item.projectTitle}</p>
+            <p className={typeStyles.label}>{item.projectTitle}</p>
           </Link>
         )}
       </div>

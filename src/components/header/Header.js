@@ -1,8 +1,8 @@
 'use client'
- 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import styles from './header.module.scss'
+import typeStyles from '../../styles/type.module.scss'
 
 export default function Header() {
 
@@ -15,9 +15,9 @@ export default function Header() {
           <Link href='/'>
             <h1>Chiara Hollender</h1>
           </Link>
-          <p>Director & Producer</p>
+          <h2>Director & Producer</h2>
         </div>
-        <div className={styles.navLinks}>
+        <div className={`${styles.navLinks} ${typeStyles.header}`}>
           <Link href='/#film-tv' scroll>Film & TV</Link>
           <Link href='/#about' scroll>About</Link>
         </div>

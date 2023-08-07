@@ -1,5 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import styles from './about.module.scss'
+import typeStyles from '../../styles/type.module.scss'
 import { mazius } from '../../fonts'
 
 function formatResponse(response) {
@@ -39,8 +40,8 @@ export default async function About() {
 
   return (
     <section id='about' className={styles.about}>
-      <h2 className={mazius.className}>About</h2>
-      <section className={styles.aboutText}>
+      <h3 className={mazius.className}>About</h3>
+      <section className={typeStyles.body}>
         {aboutPage.aboutText}
       </section>
       <section className={styles.social}>
@@ -53,7 +54,7 @@ export default async function About() {
         <img src={aboutPage.image.url} className={styles.aboutImage} alt='Chiara Hollender in Oregon, USA' />
       </section>
       <section className={styles.press}>
-        <p className={`subtitle ${styles.pressHeading}`}>Press & Screenings</p>
+        <p className={`${styles.pressHeading} ${typeStyles.label}`}>Press & Screenings</p>
         <span className={styles.pressScreenings}>{aboutPage.pressScreeningsText}</span>
       </section>
     </section>
