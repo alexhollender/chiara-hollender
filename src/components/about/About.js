@@ -43,6 +43,12 @@ export default async function About() {
       <section className={styles.aboutText}>
         {aboutPage.aboutText}
       </section>
+      <section className={styles.social}>
+        <a href="mailto:chiarahollender@gmail.com">Email</a>
+        <a href="https://www.instagram.com/chiarahollender">Instagram</a>
+        <a href="https://www.youtube.com/channel/UCbqfM3kdemyhr8lW5maTg9Q">YouTube</a>
+        <a href="https://www.imdb.com/name/nm10792648/">IMDb</a>
+      </section>
       <section>
         <img src={aboutPage.image.url} className={styles.aboutImage} alt='Chiara Hollender in Oregon, USA' />
       </section>
