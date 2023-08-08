@@ -10,8 +10,9 @@
 [X] Consolidate font styles (in utils)
 [X] Header elements fade in
 [X] customize HTML renderer so links open in new windows
+[X] Domain
+[] Use Next's custom <Image/> component
 ----------------------------------
-[] Domain
 [] Alt tags on images
 ----------------------------------
 [] Figure out CMS / deployment workflow (https://nextjs.org/docs/app/building-your-application/configuring/draft-mode)

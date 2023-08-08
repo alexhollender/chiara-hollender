@@ -1,5 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import options from '@/utils/richTextRenderOptions'
+import Image from 'next/image'
 import styles from './about.module.scss'
 import typeStyles from '../../styles/type.module.scss'
 import { mazius } from '../../fonts'
@@ -52,7 +53,13 @@ export default async function About() {
         <a href="https://www.imdb.com/name/nm10792648/" target="_blank" rel="noopener noreferrer">IMDb</a>
       </section>
       <section>
-        <img src={aboutPage.image.url} className={styles.aboutImage} alt='Chiara Hollender in Oregon, USA' />
+        <Image 
+          src={`https:${aboutPage.image.url}`}
+          width={aboutPage.image.width}
+          height={aboutPage.image.height}
+          className={styles.aboutImage} 
+          alt='Chiara Hollender in Oregon, USA' 
+        />
       </section>
       <section className={styles.press}>
         <p className={`${styles.pressHeading} ${typeStyles.label}`}>Press & Screenings</p>

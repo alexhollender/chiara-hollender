@@ -29,7 +29,6 @@
     margin: 0 0 0 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.85);
     margin-top: 16px;
-    // opacity: 0.85;
     text-transform: none;
   }
 }
@@ -48,8 +47,9 @@
 .fade3 { animation-delay: 1.75s; }
 
 .fade2 {
+  --translateStart: -10px;
   opacity: 0;
-  transform: translateX(-10px);
+  transform: translateX(var(--translateStart));
   animation: fadeInAndSlide 0.75s ease-in-out forwards;
   animation-delay: 1s;
 }
@@ -84,6 +84,11 @@
 
   .navLinks { gap: 30px; }
 
+  // on mobile fade in, but don't slide
+  .fade2 {
+    --translateStart: 0px;
+  }
+
   // Project page header
   .project {
     h1 { font-size: 28px; }
@@ -92,12 +97,6 @@
     .leftWrapper h2 { display: none; }
   }
 
-  .fade2 {
-    opacity: 0;
-    transform: none;
-    animation: fadeIn 0.75s ease-in-out forwards;
-    animation-delay: 1s;
-  }
 }
 
 @keyframes fadeIn {
@@ -112,7 +111,7 @@
 @keyframes fadeInAndSlide {
   0% {
     opacity: 0;
-    transform: translateX(-10px);
+    transform: translateX(var(--translateStart));
   }
   100% {
     opacity: 1;

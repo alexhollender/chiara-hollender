@@ -1,5 +1,6 @@
 import getData from '@/utils/getData'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './page.module.scss'
 import gridStyles from '../../styles/grid.module.scss'
 import typeStyles from '../../styles/type.module.scss'
@@ -71,8 +72,10 @@ export default async function Project({ params }) {
             .filter(item => item.url !== params.id)
             .map((item, index) =>
               <Link href={`/${item.url}`} className={gridStyles.projectWrapper} key={index}>
-                <img 
+                <Image 
                   src={`https:${item.thumbnail.url}`}
+                  width={item.thumbnail.width}
+                  height={item.thumbnail.height}
                   className={gridStyles.thumbnail}
                   alt={item.projectTitle}
                 />

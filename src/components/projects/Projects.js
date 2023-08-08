@@ -1,5 +1,6 @@
 import getData from '@/utils/getData'
-import Link from 'next/link';
+import Link from 'next/link'
+import Image from 'next/image'
 import gridStyles from '../../styles/grid.module.scss'
 import typeStyles from '../../styles/type.module.scss'
 import { mazius } from '../../fonts'
@@ -13,8 +14,10 @@ export default async function Projects() {
       <div className={gridStyles.projectsGrid}>
         {projects.map((item, index) =>
           <Link href={`/${item.url}`} className={gridStyles.projectWrapper} key={index}>
-            <img 
+            <Image 
               src={`https:${item.thumbnail.url}`}
+              width={item.thumbnail.width}
+              height={item.thumbnail.height}
               className={gridStyles.thumbnail}
               alt={item.projectTitle}
             />
