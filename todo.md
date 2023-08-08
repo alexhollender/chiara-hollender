@@ -9,10 +9,10 @@
 [X] Standardize spacing
 [X] Consolidate font styles (in utils)
 [X] Header elements fade in
+[X] customize HTML renderer so links open in new windows
 ----------------------------------
 [] Domain
 [] Alt tags on images
-[] customize HTML renderer so links open in new windows
+----------------------------------
 [] Figure out CMS / deployment workflow (https://nextjs.org/docs/app/building-your-application/configuring/draft-mode)
-
 [] Put navigation in a menu on mobile?

@@ -1,4 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import options from '@/utils/richTextRenderOptions'
 
 function formatResponse(response) {
   // Map over the items to format them
@@ -20,8 +21,8 @@ function formatResponse(response) {
       fullTitle: item.fields.fullTitle,
       subtitle: item.fields.subtitle,
       youtubeVideoId: item.fields.youtubeVideoId,
-      description: documentToReactComponents(item.fields.description),
-      credits: documentToReactComponents(item.fields.credits),
+      description: documentToReactComponents(item.fields.description, options),
+      credits: documentToReactComponents(item.fields.credits, options),
       projectDate: item.fields.projectDate,
     };
   });

@@ -10,7 +10,18 @@
   text-transform: uppercase;
 }
 
-.body p {
-  margin-bottom: 18px;
-  max-width: var(--max-text-width);
+.body {
+  p {
+    margin-bottom: 18px;
+    max-width: var(--max-text-width);
+  }
+
+  a {
+    color: var(--gray-text);
+    border-bottom: 1px solid var(--gray-border);
+  }
+}
+
+.list p {
+  margin-bottom: 4px;
 }

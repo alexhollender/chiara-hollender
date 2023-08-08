@@ -59,7 +59,7 @@ export default async function Project({ params }) {
           </div>
           <div className={styles.credits}>
             <p className={typeStyles.label}>Credits</p>
-            {project.credits}
+            <span className={`${typeStyles.body} ${typeStyles.list}`}>{project.credits}</span>
           </div>
         </div>
       </section>
