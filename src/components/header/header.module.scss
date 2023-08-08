@@ -94,7 +94,12 @@
     h1 { font-size: 28px; }
     .headerWrapper { gap: 24px; }
     .navLinks { font-size: 22px;}
-    .leftWrapper h2 { display: none; }
+    .leftWrapper h2 { 
+      visibility: hidden;
+      height: 0;
+      padding: 0;
+      margin: 0; 
+    }
   }
 
 }

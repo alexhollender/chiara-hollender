@@ -11,7 +11,7 @@
 [X] Header elements fade in
 [X] customize HTML renderer so links open in new windows
 [X] Domain
-[] Use Next's custom <Image/> component
+[X] Use Next's custom <Image/> component
 ----------------------------------
 [] Alt tags on images
 ----------------------------------
